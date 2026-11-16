@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E5-1"
+stage = 5
+description = "클럽 내 마약 감식 결과"
+evidence_type = 0
+reaction_dialogue = "감식 결과가 나왔군요. 그런데 거기서 뭔가 나왔다는 게 제가 거기 뒀다는 걸 증명하나요, 수사관님?"

@@ -1,0 +1,99 @@
+[gd_resource type="Resource" script_class="SuspectConfig" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/suspect/suspect_config.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cqwno7l4kk4l4" path="res://assets/portraits/stage7/stage7_jin_idle.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://6r0h86mn4amm" path="res://assets/portraits/stage7/stage7_jin_talking.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b4c0gs8gf0r7d" path="res://assets/portraits/stage7/stage7_jin_deny.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dmecplpwswfu6" path="res://assets/portraits/stage7/stage7_jin_smirk.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://biepdtlqogof4" path="res://assets/portraits/stage7/stage7_jin_pressured.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://ca426oxs5hw2s" path="res://assets/portraits/stage7/stage7_jin_crack.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://b8j4fqgpkv7xw" path="res://assets/portraits/stage7/stage7_jin_confess.png" id="8"]
+
+[resource]
+script = ExtResource("1")
+suspect_type = 6
+suspect_name = "진미화"
+personality_text = "한성토건 비서실장 20년. 감정을 완전히 차단한 것처럼 보이는 인물로, \"나는 지시받은 대로 했을 뿐\"이라는 태도로 일관한다. 이선아를 직접 아꼈지만 그녀의 메모를 엄기탁에게 보고한 것이 사건의 도화선이 됐다는 사실이 균열 포인트다."
+background_text = "나는 한성토건 비서실장으로 배무송 대표와 엄기탁 전무를 20년간 보좌해왔다. 1995년부터 차명계좌 10여 개를 직접 관리해왔으며, 이것이 비자금 용도라는 것을 알고 있었다. 1997년 2월, 비서실 직원 이선아가 비자금 관련 메모를 작성하는 것을 발견했다. 나는 즉시 엄기탁 전무에게 보고했다. 그게 이선아에게 어떤 결과를 가져올지 몰랐다고 말하고 싶지만, 사실 짐작은 했다. 현재 차명계좌 관리 혐의로 조사를 받고 있으며, \"업무 지시를 따랐을 뿐\"이라는 태도로 일관하고 있다."
+cover_story_text = "한성토건 비서실장으로 배무송 대표와 엄기탁 전무를 20년간 보좌했다. 회사 업무 지시에 따라 계좌 관련 서류를 처리했을 뿐이고, 계좌의 용도는 판단할 위치가 아니었다. 이선아는 비서실 직원이었다는 것 외엔 특별히 아는 게 없다."
+disclosure_tier1_text = "차명계좌 개설 서류를 직접 작성했고, 1995년부터 계좌 10여 개의 관리를 맡았다는 것은 인정할 수 있다. 지시는 엄기탁 전무를 통해 내려왔다."
+disclosure_tier2_text = "그 계좌들이 장부에 없는 회사 자금(비자금)용이라는 걸 알고 있었다. 1997년 2월, 이선아가 회사 자금 관련 내용을 메모하는 것을 본 적이 있다."
+reaction_keywords = Array[String](["이선아"])
+keyword_guard_delta = 0.0
+keyword_collapse_delta = 8.0
+keyword_reaction_note = "방금 수사관이 이선아의 이름을 꺼냈다 — 평소의 건조한 태도에 처음으로 미세한 균열이 보인다(말끝이 흐려지거나 잠시 멈칫한다). 아직 자백하지는 않는다."
+speech_style_text = "- 건조하고 단조로움: \"저는 지시받은 대로 했을 뿐입니다.\"
+- 감정 없는 존댓말. 질문에 정확하게만 대답
+- 불필요한 말을 하지 않음. 묻는 것만 답함
+- 이선아 이름이 나오면 미세하게 대답이 늦어짐
+- \"기억하지 못합니다\"를 자주 사용"
+interrogation_attitude_text = "꼿꼿한 자세. 표정 변화가 거의 없다. 감정적 접근에 반응하지 않는 것처럼 보이지만 이선아 관련 질문에는 미세한 균열이 있다."
+case_file_text = "[수사 보고서]
+사건번호: 99-형사-1105
+사건명: 한성토건 비자금 조성 사건 (차명계좌 관리)
+조사일시: 1999년 11월 5일
+
+피의자: 진미화 (여, 47세)
+혐의: 업무상 배임, 조세포탈 공동가담
+
+범행 개요:
+1995년~1999년 사이 한성토건 비자금을 운용하기 위한
+차명계좌 10여 개를 직접 개설·관리한 것으로 확인됨.
+국립과학수사연구원 필체 감정 결과:
+계좌 개설 서류 필체가 진미화와 일치.
+
+별도 사항: 1997년 이선아 실종 사건과의 관련성 조사.
+이선아의 내부고발 시도를 엄기탁에게 보고한 인물로
+지목되고 있음.
+
+첨부: 차명계좌 개설 서류 사본, 필체 감정서"
+profile_notebook_text = "[용의자 분석 메모]
+
+진미화, 47세. 한성토건 비서실장 20년.
+
+이 사람은 감정이 없는 게 아니다.
+감정을 감추는 훈련을 오래 한 것이다.
+
+이선아 이름에 반응한다.
+의도적으로 반응하지 않으려고 하지만 — 그 노력 자체가 반응이다.
+
+\"나는 보고만 했다\"는 말을 반복할 것이다.
+보고가 이선아에게 어떤 결과를 가져왔는지 알고 있느냐고 물어볼 것.
+
+약점: 죄책감. 그것만이 이 사람을 무너뜨릴 수 있다.
+논리로는 안 된다. 이선아와의 관계를 파고들 것.
+\"당신도 그녀를 걱정했을 것 아니냐\"는 접근.
+
+주의: 엄기탁·배무송을 너무 직접적으로 언급하면 닫힌다."
+opening_statement_text = "저는 지시받은 대로 했을 뿐입니다."
+fake_evidence_detected_dialogue = "그 문서, 출처가 어디입니까. 보여주시기 전에 확인하고 오시는 게 좋을 것 같습니다."
+guard_blocked_dialogue = "드릴 말씀이 없습니다."
+classification_failed_dialogue = "다시 말씀해주시겠습니까."
+dissociation_dialogue_lines = Array[String](["……. ……네? …….", "……죄송합니다. 지금… 무슨 말씀을 하셨는지 잘… 들리지 않습니다."])
+confession_dialogue_text = "...제가 보고했습니다. 이선아씨가 메모를 쓰는 걸 보고, 곧바로 엄기탁 전무님께 알렸어요. 그게 어떤 결과로 이어질지... 사실은 짐작하고 있었습니다."
+charisma = 45
+logic = 65
+acting = 70
+composure = 60
+adaptability = 55
+deception = 75
+init_guard = 65.0
+init_rapport = 5.0
+init_ego = 65.0
+guard_session_end = 90.0
+ego_extreme = 15.0
+confession_guard_max = 30.0
+confession_rapport_min = 50.0
+collapse_confession_min = 60.0
+emotion_sprites = Dictionary[String, Texture2D]({
+"idle": ExtResource("2"),
+"talking": ExtResource("3"),
+"deny": ExtResource("4"),
+"smirk": ExtResource("5"),
+"pressured": ExtResource("6"),
+"crack": ExtResource("7"),
+"confess": ExtResource("8"),
+})
+valid_emotion_tags = Array[String](["idle", "talking", "deny", "smirk", "pressured", "crack", "confess"])
+emotion_tag_evidence_real = "pressured"
+emotion_tag_evidence_fake_caught = "smirk"

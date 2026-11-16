@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E8-3"
+stage = 8
+description = "비자금 결재문서 (박성훈 사인, 엄기탁 부서명 — 위조 가능성)"
+evidence_type = 1
+reaction_dialogue = "위조 가능성이 있다는 건 자네도 알고 있지 않나. 그런 걸 여기 들고 오면 곤란하지."

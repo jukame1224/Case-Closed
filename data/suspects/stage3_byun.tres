@@ -1,0 +1,95 @@
+[gd_resource type="Resource" script_class="SuspectConfig" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/suspect/suspect_config.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bl7jijewsems0" path="res://assets/portraits/stage3/stage3_byun_idle.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://k6x28x5dwglo" path="res://assets/portraits/stage3/stage3_byun_talking.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://3lw5u6g8m654" path="res://assets/portraits/stage3/stage3_byun_deny.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://doq27jt5h6ddp" path="res://assets/portraits/stage3/stage3_byun_pressured.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://6x0ywt6x6bgh" path="res://assets/portraits/stage3/stage3_byun_calculating.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://k4lj5h5oyjog" path="res://assets/portraits/stage3/stage3_byun_angry.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cr8x16272vcqx" path="res://assets/portraits/stage3/stage3_byun_confess.png" id="8"]
+
+[resource]
+script = ExtResource("1")
+suspect_type = 2
+suspect_name = "변갑수"
+personality_text = "25년 경력 버스기사. 무뚝뚝하고 타인에 대한 불신이 강하다. 감정보다 손익계산으로 움직이는 인물로, 인정하면 직업도 연금도 다 날아간다는 계산 하에 모든 것을 부인하고 있다. 죄책감은 있지만 그것이 자백으로 이어지지는 않는다."
+background_text = "1999년 11월 2일 밤, 동료들과 회식 후 소주 세 병을 마시고 개인 차량으로 귀가하다가 횡단보도를 건너던 보행자 이모씨(47세)를 치었다. 충격을 느꼈지만 멈추지 않고 도주했다. 피해자는 현재 중상으로 입원 중이다. 사고 직후 나는 차량을 세차하고 타이어를 교체했다. 경찰이 혈중알코올 측정을 요청했으나 거부했다. 현재 \"내가 사람을 쳤는지 몰랐다\"는 태도로 일관하고 있다. 감식 결과 타이어 흔적이 내 차량과 일치하는 것으로 나왔지만 나는 여전히 부인하고 있다."
+cover_story_text = "1999년 11월 2일 회식 후 차를 몰고 귀가한 건 맞지만, 사람을 친 기억은 전혀 없다. 무언가를 쳤다면 알았을 것이다. 혈중알코올 측정 거부는 정당한 권리였다."
+disclosure_tier1_text = "회식에서 술을 마신 건 맞다(양은 줄여 말한다). 사고 다음 날 차를 세차하고 타이어를 교체했다(정기 교체였다고 주장한다)."
+disclosure_tier2_text = "귀가하던 길에 차에 충격이 있었던 것 같기는 하다. 무언가 들이받은 느낌이었지만 동물이나 물건인 줄 알았다고 주장한다."
+speech_style_text = "- 짧고 퉁명스러움: \"모릅니다.\", \"기억 안 납니다.\", \"증거 있어요?\"
+- 존댓말이지만 불친절하고 귀찮다는 뉘앙스
+- 질문에 최소한으로만 대답
+- 감정적 반응을 거의 보이지 않음
+- 취조관을 신뢰하지 않는다는 태도 노골적"
+interrogation_attitude_text = "팔짱을 끼고 뒤로 기댄다. 눈은 마주치지만 차갑다. 감정 기법에는 콧방귀를 뀐다."
+case_file_text = "[수사 보고서]
+사건번호: 99-형사-1102
+사건명: 특정범죄가중처벌법위반 (도주차량)
+발생일시: 1999년 11월 2일 22:47
+발생장소: 서울 성동구 ○○횡단보도
+
+피의자: 변갑수 (남, 45세)
+혐의: 뺑소니, 음주운전, 증거인멸
+
+범행 개요:
+피의자가 혈중알코올 추정 상태에서 차량을 운전하다
+횡단보도를 건너던 이○○(47세, 한성토건 하청업체 직원)를
+충격 후 도주한 것으로 조사됨.
+피해자는 현재 중상으로 입원 중.
+
+사고 후 차량 세차 및 타이어 교체 정황 포착.
+혈중알코올 측정 거부.
+국립과학수사연구원 타이어 흔적 감정 결과:
+피의자 차량과 일치 (일치도 94%)
+
+첨부: 타이어 감정서 1부, 측정 거부 기록 1부"
+profile_notebook_text = "[용의자 분석 메모]
+
+변갑수, 45세. 버스기사 25년 경력. 기혼, 자녀 2.
+
+이 사람은 감정으로 움직이지 않는다.
+모든 것을 손익으로 계산한다.
+인정하면 면허 취소, 직장 해고, 연금 날아감.
+그 계산이 자백을 막고 있는 것.
+
+거짓말쟁이가 아니라 버티는 사람이다.
+증거가 쌓이면 결국 계산이 바뀐다.
+
+약점: 타이어 감정서가 결정타. 이걸 직접 보여줘야 한다.
+\"피해자가 어떤 상태인지\" 구체적으로 말하면 균열이 생길 수 있음.
+감정에 호소하면 역효과. 사실과 증거만으로 압박할 것.
+
+주의: 너무 몰아붙이면 세션 종료 선언할 수 있음."
+opening_statement_text = "모릅니다. 기억 안 나요. 증거 있어요?"
+fake_evidence_detected_dialogue = "그게 증거예요? 웃기는 소리 하시네요."
+guard_blocked_dialogue = "할 말 없습니다."
+classification_failed_dialogue = "무슨 소리예요."
+confession_dialogue_text = "...하. 좋습니다. 제가 쳤어요. 그날 제가 운전했고, 사람을 쳤다는 것도 알고 있었습니다. 그냥... 무서워서 도망친 겁니다."
+charisma = 30
+logic = 35
+acting = 20
+composure = 70
+adaptability = 25
+deception = 45
+init_guard = 55.0
+init_rapport = 15.0
+init_ego = 55.0
+guard_session_end = 80.0
+ego_extreme = 20.0
+confession_guard_max = 25.0
+confession_rapport_min = 45.0
+collapse_confession_min = 55.0
+emotion_sprites = Dictionary[String, Texture2D]({
+"idle": ExtResource("2"),
+"talking": ExtResource("3"),
+"deny": ExtResource("4"),
+"pressured": ExtResource("5"),
+"calculating": ExtResource("6"),
+"angry": ExtResource("7"),
+"confess": ExtResource("8"),
+})
+valid_emotion_tags = Array[String](["idle", "talking", "deny", "pressured", "calculating", "angry", "confess"])
+emotion_tag_evidence_real = "pressured"
+emotion_tag_evidence_fake_caught = "calculating"

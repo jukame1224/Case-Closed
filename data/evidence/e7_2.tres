@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E7-2"
+stage = 7
+description = "이선아→진미화 내부고발 메모 (원본 소각됨)"
+evidence_type = 1
+reaction_dialogue = "그 메모는 존재하지 않습니다. 처음 보는 문서입니다."

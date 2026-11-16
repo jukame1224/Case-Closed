@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E9-2"
+stage = 9
+description = "한성토건 내부 감사보고서 (불법 반출, 증거능력 없음)"
+evidence_type = 1
+reaction_dialogue = "흥미롭군요. 그 보고서가 어떤 경로로 여기까지 나왔는지도 조사하셔야 하지 않겠습니까."

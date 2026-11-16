@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E9-3"
+stage = 9
+description = "익명 제보자 진술 (법정 증거 불가, 심리적 압박용)"
+evidence_type = 1
+reaction_dialogue = "익명 제보. 그것만으로 무언가를 주장하시려는 겁니까."

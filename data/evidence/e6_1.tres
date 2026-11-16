@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E6-1"
+stage = 6
+description = "비자금 장부 사본 1페이지 (도상욱 서명)"
+evidence_type = 0
+reaction_dialogue = "그... 그건... 도장 찍으라고 해서 찍은 거예요. 뭔지는... 뭔지는 몰랐어요, 진짜로."

@@ -1,0 +1,710 @@
+[gd_scene format=3 uid="uid://cf24kdr8ftj6v"]
+
+[ext_resource type="Script" uid="uid://h0u1mhrebpiw" path="res://scripts/ui/interrogation_room.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/UI/StatementInputPanel.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/UI/EvidenceReview.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://uub7f7atm1kg" path="res://assets/backgrounds/interrogation_room_426x240.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://casfp8fxpmf6s" path="res://assets/icons/icon_hint.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://ee2mmbppe7vc" path="res://assets/icons/icon_casefile.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://brkme8y2kfvud" path="res://assets/icons/icon_notebook.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cox5oxtoxv3hr" path="res://assets/icons/icon_evidence.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://db5uvwv1jrrio" path="res://assets/icons/icon_pen.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://c2nungl741pxl" path="res://assets/icons/icon_memo.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://dhwxn2widxbif" path="res://assets/ui/frame_suspect.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dkco52f1g65gn" path="res://assets/ui/frame_stage_header.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cdd8wrwsdpa4n" path="res://assets/ui/frame_actions_box.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://bl5kw6j3870p2" path="res://assets/ui/slot_full.png" id="14"]
+[ext_resource type="AudioStream" uid="uid://bmkqcxxaqjc33" path="res://assets/sfx/text_blip.mp3" id="15"]
+
+[node name="InterrogationRoom" type="Control" unique_id=372414243]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="BlipPlayer" type="AudioStreamPlayer" parent="." unique_id=1773044821]
+unique_name_in_owner = true
+stream = ExtResource("15")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1304533033]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1019608, 0.07058824, 0.03137255, 1)
+
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=1918545992]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -608.0
+offset_top = -342.0
+offset_right = 606.1
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4")
+expand_mode = 1
+
+[node name="SuspectPortrait" type="Control" parent="." unique_id=1647189971]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -212.0
+offset_right = 200.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SuspectPortraitTexture" type="TextureRect" parent="SuspectPortrait" unique_id=920149357]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -194.0
+offset_right = 168.0
+offset_bottom = 331.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="OverheadNarrationLabel" type="Label" parent="." unique_id=1583920467]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -218.0
+offset_right = 400.0
+offset_bottom = -184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GuardWarningLabel" type="Label" parent="." unique_id=1583920468]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -254.0
+offset_right = 400.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.55, 0.5, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusPanel" type="Control" parent="." unique_id=1907234906]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -262.0
+offset_top = 14.0
+offset_right = -14.0
+offset_bottom = 98.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="StageHeader" type="NinePatchRect" parent="StatusPanel" unique_id=6000001]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 29.0
+grow_horizontal = 2
+texture = ExtResource("12")
+patch_margin_left = 16
+patch_margin_top = 5
+patch_margin_right = 4
+patch_margin_bottom = 5
+
+[node name="StageLabel" type="Label" parent="StatusPanel/StageHeader" unique_id=6000002]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.92549, 0.92549, 0.937255, 1)
+theme_override_font_sizes/font_size = 14
+text = "STAGE 1 - 이름"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ActionsBox" type="NinePatchRect" parent="StatusPanel" unique_id=6000003]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="StatusPanel/ActionsBox" unique_id=6000004]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatusPanel/ActionsBox/MarginContainer" unique_id=1053518566]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="ActionsLabel" type="Label" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer" unique_id=1045874440]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92549, 0.92549, 0.937255, 1)
+theme_override_font_sizes/font_size = 13
+text = "남은 행동"
+horizontal_alignment = 2
+
+[node name="ActionSquaresContainer" type="HBoxContainer" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer" unique_id=1774870067]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+theme_override_constants/separation = 2
+
+[node name="Square0" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=182177437]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="Square1" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=617246016]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="Square2" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=957142204]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="Square3" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=902503859]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="Square4" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=106859453]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="Square5" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=2072590017]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="Square6" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=1094641623]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="Square7" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=1601800578]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="Square8" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=1285099418]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="Square9" type="TextureRect" parent="StatusPanel/ActionsBox/MarginContainer/VBoxContainer/ActionSquaresContainer" unique_id=1144770511]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14")
+stretch_mode = 2
+
+[node name="SuspectPanel" type="NinePatchRect" parent="." unique_id=6000010]
+texture_filter = 1
+layout_mode = 1
+offset_left = 32.0
+offset_top = 282.0
+offset_right = 402.0
+offset_bottom = 482.0
+texture = ExtResource("11")
+patch_margin_left = 80
+patch_margin_top = 28
+patch_margin_right = 10
+patch_margin_bottom = 6
+
+[node name="TabLabel" type="Label" parent="SuspectPanel" unique_id=6000011]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 70.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.92549, 0.92549, 0.937255, 1)
+theme_override_font_sizes/font_size = 13
+text = "용의자"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SuspectDialogueLabel" type="RichTextLabel" parent="SuspectPanel" unique_id=6000013]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 44.0
+offset_right = -22.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.92549, 0.92549, 0.937255, 1)
+theme_override_constants/line_separation = 6
+theme_override_font_sizes/normal_font_size = 18
+scroll_following = true
+
+[node name="ItemTable" type="HBoxContainer" parent="." unique_id=1294494201]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -140.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="HintIcon" type="Button" parent="ItemTable" unique_id=72796774]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+flat = true
+
+[node name="IconTexture" type="TextureRect" parent="ItemTable/HintIcon" unique_id=5000001]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5")
+expand_mode = 1
+
+[node name="CaseFileIcon" type="Button" parent="ItemTable" unique_id=1585325841]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+flat = true
+
+[node name="IconTexture" type="TextureRect" parent="ItemTable/CaseFileIcon" unique_id=5000002]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6")
+expand_mode = 1
+
+[node name="ProfileIcon" type="Button" parent="ItemTable" unique_id=1025193336]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+flat = true
+
+[node name="IconTexture" type="TextureRect" parent="ItemTable/ProfileIcon" unique_id=5000003]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7")
+expand_mode = 1
+
+[node name="EvidenceIcon" type="Button" parent="ItemTable" unique_id=1659406549]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+flat = true
+
+[node name="IconTexture" type="TextureRect" parent="ItemTable/EvidenceIcon" unique_id=5000004]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8")
+expand_mode = 1
+
+[node name="PenIcon" type="Button" parent="ItemTable" unique_id=1983551538]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+flat = true
+
+[node name="IconTexture" type="TextureRect" parent="ItemTable/PenIcon" unique_id=5000005]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9")
+expand_mode = 1
+
+[node name="MemoIcon" type="Button" parent="ItemTable" unique_id=676839999]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+flat = true
+
+[node name="IconTexture" type="TextureRect" parent="ItemTable/MemoIcon" unique_id=5000006]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10")
+expand_mode = 1
+
+[node name="ConfessionContinueButton" type="Button" parent="." unique_id=6000025]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 230.0
+offset_right = 60.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "다음"
+
+[node name="StatementInputPanel" parent="." unique_id=322052585 instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -402.0
+offset_top = 282.0
+offset_right = -32.0
+offset_bottom = 482.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="EvidenceOverlay" type="Control" parent="." unique_id=2067757524]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="EvidenceOverlay" unique_id=2138420217]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="EvidencePanel" type="Panel" parent="EvidenceOverlay" unique_id=804850381]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="EvidenceOverlay/EvidencePanel" unique_id=1041281711]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EvidenceOverlay/EvidencePanel/MarginContainer" unique_id=798776117]
+layout_mode = 2
+
+[node name="EvidenceReview" parent="EvidenceOverlay/EvidencePanel/MarginContainer/VBoxContainer" unique_id=777756721 instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="EvidenceCloseButton" type="Button" parent="EvidenceOverlay/EvidencePanel/MarginContainer/VBoxContainer" unique_id=342776636]
+unique_name_in_owner = true
+layout_mode = 2
+text = "닫기"
+
+[node name="DialogueLogOverlay" type="Control" parent="." unique_id=6000020]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="DialogueLogOverlay" unique_id=6000021]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="DialogueLogPanel" type="Panel" parent="DialogueLogOverlay" unique_id=1457807410]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -220.0
+offset_right = 280.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogueLogOverlay/DialogueLogPanel" unique_id=2080732230]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueLogOverlay/DialogueLogPanel/MarginContainer" unique_id=6000022]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="DialogueLog" type="RichTextLabel" parent="DialogueLogOverlay/DialogueLogPanel/MarginContainer/VBoxContainer" unique_id=1092035770]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 13
+text = "대화 기록"
+scroll_following = true
+
+[node name="DialogueLogCloseButton" type="Button" parent="DialogueLogOverlay/DialogueLogPanel/MarginContainer/VBoxContainer" unique_id=6000023]
+unique_name_in_owner = true
+layout_mode = 2
+text = "닫기"
+
+[node name="TextPopupOverlay" type="Control" parent="." unique_id=1423223313]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="TextPopupOverlay" unique_id=297098786]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="TextPopupPanel" type="Panel" parent="TextPopupOverlay" unique_id=1256487539]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -200.0
+offset_right = 240.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextPopupOverlay/TextPopupPanel" unique_id=1195520123]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextPopupOverlay/TextPopupPanel/MarginContainer" unique_id=1718344754]
+layout_mode = 2
+
+[node name="TextPopupLabel" type="RichTextLabel" parent="TextPopupOverlay/TextPopupPanel/MarginContainer/VBoxContainer" unique_id=1455463034]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "준비 중입니다."
+
+[node name="TextPopupCloseButton" type="Button" parent="TextPopupOverlay/TextPopupPanel/MarginContainer/VBoxContainer" unique_id=416786382]
+unique_name_in_owner = true
+layout_mode = 2
+text = "닫기"

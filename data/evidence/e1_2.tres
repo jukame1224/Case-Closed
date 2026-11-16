@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E1-2"
+stage = 1
+description = "공범 진술서 (\"차승목이 망봐줬다\")"
+evidence_type = 0
+reaction_dialogue = "재호가... 재호가 그런 말을 했어요? 저는... 저는 아무것도 한 게 없는데..."

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E3-3"
+stage = 3
+description = "목격자 진술 (번호판 일부만 기억, 불확실)"
+evidence_type = 1
+reaction_dialogue = "번호판 일부만 봤다고요? 그게 증거가 돼요? 저도 법은 알아요."

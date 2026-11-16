@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E1-1"
+stage = 1
+description = "CCTV 캡처 (범행 당시 외부 대기 모습)"
+evidence_type = 0
+reaction_dialogue = "저... 거기 서있었던 건 맞는데... 그건 그냥 기다린 거예요. 재호가 금방 나온다고 해서..."

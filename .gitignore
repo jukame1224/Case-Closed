@@ -1,0 +1,6 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# 테스트 배포용 exe 빌드 — launch_game.bat에 실제 API 키가 평문으로 들어가므로 절대 커밋하지 않는다.
+/build/

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E8-2"
+stage = 8
+description = "별장 토지대장 (이선아 실종 장소 추정, 미확인)"
+evidence_type = 1
+reaction_dialogue = "별장이라... 내 이름이 거기 어디 나와 있나? 직접 보여주게."

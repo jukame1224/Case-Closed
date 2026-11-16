@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E4-3"
+stage = 4
+description = "학생 증언록 (이미 철회된 상태)"
+evidence_type = 1
+reaction_dialogue = "그 학생이 그런 말을 했다고요? 제가 그 아이를 얼마나 아끼는지 아세요. 말도 안 돼요."

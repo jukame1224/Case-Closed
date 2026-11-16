@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E1-3"
+stage = 1
+description = "범행 직전 공범과의 통화기록"
+evidence_type = 0
+reaction_dialogue = "전화한 건 맞는데... 그냥 어디 있냐고 물어본 거예요. 그것도 잘못인가요..."

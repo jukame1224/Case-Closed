@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E4-2"
+stage = 4
+description = "학부모 금품 이체 내역"
+evidence_type = 0
+reaction_dialogue = "그 금액이... 그건 오해예요. 그 돈이 어떤 성격의 돈인지 제가 설명드릴 수 있어요."

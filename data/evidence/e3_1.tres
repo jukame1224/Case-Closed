@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E3-1"
+stage = 3
+description = "타이어 흔적 감정서 (차량 일치)"
+evidence_type = 0
+reaction_dialogue = "감정서요. 그래서요. 비슷한 타이어가 얼마나 많은지 아세요? 그게 제 차라는 걸 어떻게 확신해요."

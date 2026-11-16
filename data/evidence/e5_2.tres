@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E5-2"
+stage = 5
+description = "유통책 자백서 (실제론 석봉길과 거래 없음)"
+evidence_type = 1
+reaction_dialogue = "박씨요? 저는 그 사람 이름도 처음 들어봐요. 자백 내용 좀 더 자세히 보여주시겠어요?"

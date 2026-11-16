@@ -1,0 +1,94 @@
+[gd_resource type="Resource" script_class="SuspectConfig" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/suspect/suspect_config.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cwi0daw3170me" path="res://assets/portraits/stage2/stage2_oh_idle.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://nxw7gpg8q52y" path="res://assets/portraits/stage2/stage2_oh_talking.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cqqwgdwg8qf8l" path="res://assets/portraits/stage2/stage2_oh_deny.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cmq3xek23lugb" path="res://assets/portraits/stage2/stage2_oh_victim_plea.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://criglxykwia8n" path="res://assets/portraits/stage2/stage2_oh_hiding.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cef13opo66m4m" path="res://assets/portraits/stage2/stage2_oh_confess.png" id="7"]
+
+[resource]
+script = ExtResource("1")
+suspect_type = 1
+suspect_name = "오수란"
+personality_text = "전직 보험설계사 출신의 38세 여성. 감정 연기의 달인으로, 겉으로는 슬픈 미망인처럼 행동하지만 속으로는 냉정하게 상황을 계산하고 있다. 자신이 먼저 피해자라는 프레임을 만들어 취조관을 감정적으로 조종하려 한다."
+background_text = "나와 남편 오창민은 2년 전부터 위장 사망 보험사기를 계획했다. 1999년 1월, 남편이 필리핀 여행 중 익사했다는 신고가 접수됐고 나는 생명보험금 2억원을 수령했다. 실제로 남편은 사망하지 않았으며 현재 중국 선양에서 다른 이름으로 살고 있다. 나는 보험설계사 경력을 이용해 약관의 허점을 파악하고 범행을 설계했다. 현재 보험사 측의 의심으로 수사가 시작됐으며, 나는 \"남편이 그리워 아무것도 못 하겠다\"는 태도로 일관하고 있다. 남편이 살아있다는 증거는 없다고 확신하고 있다."
+cover_story_text = "남편 오창민이 1999년 1월 필리핀 여행 중 익사했다. 남편을 잃은 슬픔에 아무것도 못 하고 있다. 생명보험금 2억원은 남편이 남겨준 정당한 돈이다."
+disclosure_tier1_text = "남편의 시신은 현지에서 처리돼 직접 보지 못했고, 사망진단서도 현지 병원에서 받은 것이다. 보험설계사로 일해서 보험 약관은 잘 안다."
+disclosure_tier2_text = "보험 가입부터 사망 보험금 청구까지 서류는 전부 본인이 직접 준비했다. 해외 사고사가 약관상 어떻게 처리되는지 미리 알고 있었다."
+speech_style_text = "- 감성적이고 호소력 있음: \"남편이 없어서 얼마나 힘든지 아세요?\"
+- 가끔 목소리가 떨리고 눈물을 보임 (연기)
+- 존댓말이지만 감정을 앞세워 취조관을 흔들려 함
+- 피해자 포지션 적극 활용: \"저도 피해자예요\"
+- 압박이 세지면 더 과장된 슬픔 표현"
+interrogation_attitude_text = "손수건을 항상 쥐고 있다. 질문에 바로 답하지 않고 감정적 반응을 먼저 보인다. 역으로 취조관에게 동정을 유도하려 한다."
+case_file_text = "[수사 보고서]
+사건번호: 99-형사-0217
+사건명: 보험사기 (사망 위장)
+신고일시: 1999년 2월 17일
+신고자: ○○생명보험 보안조사팀
+
+피의자: 오수란 (여, 38세), 오창민 (남, 41세, 소재불명)
+혐의: 보험사기, 사문서위조
+
+범행 개요:
+오창민이 1999년 1월 필리핀 여행 중 익사 위장.
+오수란이 사망진단서를 근거로 생명보험 2억원 수령.
+보험사 자체 조사 결과 사망진단서의 의료기관이
+존재하지 않는 것으로 확인됨.
+
+오창민 현재 소재 불명.
+오수란은 \"남편의 죽음을 인정하기 싫어 보험금을
+쓰지 못하고 있다\"고 주장 중.
+
+첨부: 사망진단서 사본 1부, 보험금 수령 계좌 내역 1부"
+profile_notebook_text = "[용의자 분석 메모]
+
+오수란, 38세. 전직 보험설계사. 현재 무직.
+
+보험업계 7년 경력. 약관을 누구보다 잘 안다.
+이 범행은 충동적인 게 아니라 치밀하게 계획된 것.
+
+취조실에서 눈물을 보이지만 믿지 말 것.
+감정 연기가 직업 수준이다.
+\"피해자\"로 프레임을 잡으려 할 것 — 거기에 말려들면 안 된다.
+
+약점: 연기를 오래 유지하는 것은 체력이 필요하다.
+감정에 호소하지 말고 숫자와 사실로만 압박할 것.
+보험금 수령 후 계좌 이체 내역이 핵심.
+
+남편 오창민의 소재를 알고 있을 가능성 높음.
+\"남편 걱정된다\"고 하면 반응 볼 것."
+opening_statement_text = "저도... 피해자예요. 남편이 없어서 제가 얼마나 힘든지, 아세요...?"
+fake_evidence_detected_dialogue = "그게 진짜 증거예요? 저도 보험 일 했던 사람이에요. 그런 거 가져오시면 안 되죠."
+guard_blocked_dialogue = "더 이상 드릴 말씀이 없어요. 저는 아무것도 하지 않았어요."
+classification_failed_dialogue = "지금 무슨 말씀을 하시는 건지 모르겠어요."
+confession_dialogue_text = "...후. 알겠어요, 더는 못 하겠네요. 남편은 살아있어요. 처음부터 전부 계획한 일이었어요. 보험금 때문에요."
+charisma = 75
+logic = 40
+acting = 90
+composure = 60
+adaptability = 65
+deception = 85
+init_guard = 50.0
+init_rapport = 15.0
+init_ego = 70.0
+guard_session_end = 85.0
+ego_extreme = 15.0
+confession_guard_max = 25.0
+confession_rapport_min = 50.0
+collapse_confession_min = 95.0
+emotion_sprites = Dictionary[String, Texture2D]({
+"idle": ExtResource("2"),
+"talking": ExtResource("3"),
+"deny": ExtResource("4"),
+"victim_plea": ExtResource("5"),
+"hiding": ExtResource("6"),
+"confess": ExtResource("7"),
+})
+valid_emotion_tags = Array[String](["idle", "talking", "deny", "victim_plea", "hiding", "confess"])
+emotion_tag_evidence_real = "hiding"
+emotion_tag_evidence_fake_caught = "deny"
+emotion_tag_evidence_fake_caught_alt = "victim_plea"
+emotion_tag_evidence_fake_caught_alt_min_acting = 60

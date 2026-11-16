@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E4-1"
+stage = 4
+description = "성적 수정 전후 비교 파일 (교무처 원본)"
+evidence_type = 0
+reaction_dialogue = "그건... 재채점 과정에서 수정된 거예요. 교사에게는 성적 수정 권한이 있고, 저는 그 권한 안에서 행동한 겁니다."

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E3-2"
+stage = 3
+description = "혈중알코올 측정 거부 기록 (사고 직후)"
+evidence_type = 0
+reaction_dialogue = "거부할 권리가 있잖아요. 그게 뭐가 문제예요. 거부했다고 죄인은 아니잖아요."

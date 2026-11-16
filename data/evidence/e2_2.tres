@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E2-2"
+stage = 2
+description = "보험금 수령 계좌 내역"
+evidence_type = 0
+reaction_dialogue = "그건 제 돈이에요. 남편이 남겨준 거잖아요. 제가 그걸 받으면 안 된다는 거예요?"

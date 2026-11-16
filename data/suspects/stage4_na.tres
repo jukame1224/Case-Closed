@@ -1,0 +1,94 @@
+[gd_resource type="Resource" script_class="SuspectConfig" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/suspect/suspect_config.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cm6ct8cogydc" path="res://assets/portraits/stage4/stage4_na_idle.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bgwx5sgs3x8tx" path="res://assets/portraits/stage4/stage4_na_talking.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bnugwsbsvx3xy" path="res://assets/portraits/stage4/stage4_na_deny.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dl1s2cgkuewmm" path="res://assets/portraits/stage4/stage4_na_confident.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cbdpm06u18fgd" path="res://assets/portraits/stage4/stage4_na_flustered.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://crdj3dv2nfhrd" path="res://assets/portraits/stage4/stage4_na_counterattack.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://it5w25tvreks" path="res://assets/portraits/stage4/stage4_na_confess.png" id="8"]
+
+[resource]
+script = ExtResource("1")
+suspect_type = 3
+suspect_name = "나혜경"
+personality_text = "명문대 출신 고등학교 교사. 자신의 지성과 도덕성에 강한 자부심을 가진 인물로, 돈에 움직였다는 사실 자체를 인정할 수 없다. 범행을 저지른 것은 맞지만 자신이 \"그런 사람\"이라는 사실을 받아들이지 못해 논리로 모든 것을 반박하려 한다."
+background_text = "나는 서울 ○○고등학교 국어 교사로 재직 중이다. 1998년부터 1999년 사이 학부모 3명으로부터 총 1,200만원을 받고 자녀들의 내신 성적을 수정했다. 처음에는 \"정당한 재채점\"이라고 스스로를 납득시켰다. 돈은 현금으로 받았고 흔적을 남기지 않으려 했으나, 한 학부모가 계좌로 이체한 기록이 남아있다. 성적 수정 전후의 원본 파일도 교무처 서버에 남아있었다. \"억울하게 낮은 점수를 받은 학생을 도운 것\"이라는 논리를 준비하고 있다."
+cover_story_text = "○○고 국어 교사다. 성적 수정은 억울하게 낮은 점수를 받은 학생들을 정당하게 재채점한 것이다. 돈을 받고 성적을 고친 적은 없다."
+disclosure_tier1_text = "재채점은 정식 절차 없이 혼자 처리했다. 해당 학생들의 학부모와 따로 만난 적이 있다."
+disclosure_tier2_text = "그 학부모들에게서 돈을 받은 적은 있다(합쳐서 1,200만원 정도). 다만 \"감사 표시\"나 \"과외비\"였다고 주장한다."
+speech_style_text = "- 논리적이고 약간 거만함: \"그런 식으로 생각하시면 곤란하죠.\"
+- 문어체에 가까운 존댓말. 취조관보다 자신이 더 지적이라는 뉘앙스
+- 질문을 되받아치는 경향: \"그게 무슨 근거로 하시는 말씀인가요?\"
+- 감정적이 되면 목소리가 높아짐
+- \"교육자로서\", \"학생을 위해서\"라는 표현 반복"
+interrogation_attitude_text = "바른 자세를 유지한다. 논리로 모든 것을 받아치려 한다. 실물 증거가 나왔을 때만 처음으로 흔들린다."
+case_file_text = "[수사 보고서]
+사건번호: 99-형사-0915
+사건명: 업무상 배임, 뇌물수수
+신고일시: 1999년 9월 15일
+신고자: ○○고등학교 학부모 익명 제보
+
+피의자: 나혜경 (여, 34세)
+혐의: 업무상 배임, 뇌물수수
+
+범행 개요:
+1998년 9월~1999년 6월 사이 학부모 3명으로부터
+총 1,200만원을 수수하고 자녀 3명의 내신 성적을
+각각 2~4점 상향 수정한 것으로 조사됨.
+
+교무처 서버에서 수정 전/후 파일 모두 확보.
+학부모 오○○의 계좌 이체 기록 확인됨.
+나혜경은 \"정당한 재채점이었다\"고 주장 중.
+
+첨부: 성적 비교 파일 1부, 계좌 이체 내역 1부"
+profile_notebook_text = "[용의자 분석 메모]
+
+나혜경, 34세. ○○대 국문과 졸업. 교사 8년차.
+
+이 사람의 자존심은 \"나는 올바른 교육자\"라는
+자기 이미지와 직결되어 있다.
+그 이미지가 흔들리는 순간 무너진다.
+
+논리 싸움을 하려 할 텐데 —
+논리로 이기려 하면 안 된다. 오히려 거기서 에너지를 얻는다.
+증거를 보여줘서 논리의 여지를 없애는 것이 맞다.
+
+약점: 계좌 이체 내역. 현금은 \"선물\"이라고 우길 수 있지만
+계좌는 우길 수 없다.
+\"학생들이 어떻게 됐는지 아느냐\"는 질문에 감정이 흔들릴 수 있음.
+
+주의: 감정 기법은 초반엔 역효과.
+증거로 먼저 균열을 만든 다음 감정으로 마무리할 것."
+opening_statement_text = "그런 식으로 생각하시면 곤란하죠. 제가 뭘 했다는 근거라도 있으신가요?"
+fake_evidence_detected_dialogue = "그 증언록, 현재 효력이 없는 거 아닌가요? 저도 그 사실 알고 있어요."
+guard_blocked_dialogue = "더 이상 이 자리에서 드릴 말씀이 없습니다. 제 변호사를 불러주세요."
+classification_failed_dialogue = "질문의 의도를 이해하기 어렵네요."
+confession_dialogue_text = "...좋아요, 인정하죠. 돈을 받고 성적을 고쳤어요. 하지만 그게 저를 나쁜 사람으로 만든다고는 생각 안 해요."
+charisma = 60
+logic = 80
+acting = 55
+composure = 65
+adaptability = 50
+deception = 60
+init_guard = 60.0
+init_rapport = 15.0
+init_ego = 92.0
+guard_session_end = 85.0
+ego_extreme = 20.0
+confession_guard_max = 30.0
+confession_rapport_min = 45.0
+collapse_confession_min = 60.0
+emotion_sprites = Dictionary[String, Texture2D]({
+"idle": ExtResource("2"),
+"talking": ExtResource("3"),
+"deny": ExtResource("4"),
+"confident": ExtResource("5"),
+"flustered": ExtResource("6"),
+"counterattack": ExtResource("7"),
+"confess": ExtResource("8"),
+})
+valid_emotion_tags = Array[String](["idle", "talking", "deny", "confident", "flustered", "counterattack", "confess"])
+emotion_tag_evidence_real = "flustered"
+emotion_tag_evidence_fake_caught = "confident"

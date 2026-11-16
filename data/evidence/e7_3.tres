@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E7-3"
+stage = 7
+description = "엄기탁과 비밀 면담 기록 (날짜 오류 있음)"
+evidence_type = 1
+reaction_dialogue = "날짜를 보십시오. 그날 저는 출장 중이었습니다. 기록을 확인해보시면 됩니다."

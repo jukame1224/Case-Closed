@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E2-3"
+stage = 2
+description = "\"남편이 살아있다\"는 제보 (신원미상, 미확인)"
+evidence_type = 1
+reaction_dialogue = "익명 제보요? 그런 말이 어딨어요. 남편이 살아있다고요? 저한테 그런 말씀을 하시는 거예요?"

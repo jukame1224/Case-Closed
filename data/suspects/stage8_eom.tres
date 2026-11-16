@@ -1,0 +1,98 @@
+[gd_resource type="Resource" script_class="SuspectConfig" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/suspect/suspect_config.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dcl04qp3cdipm" path="res://assets/portraits/stage8/stage8_eom_idle.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cyoc8twus8lv1" path="res://assets/portraits/stage8/stage8_eom_talking.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://c0o0f8ax4g6yr" path="res://assets/portraits/stage8/stage8_eom_deny.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dn5v5e8f0ayuh" path="res://assets/portraits/stage8/stage8_eom_frozen.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dnfqj13u4ejgu" path="res://assets/portraits/stage8/stage8_eom_suppressing.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cw56qchc8q4wb" path="res://assets/portraits/stage8/stage8_eom_rage.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cwvbt7yx2twnt" path="res://assets/portraits/stage8/stage8_eom_confess.png" id="8"]
+
+[resource]
+script = ExtResource("1")
+suspect_type = 7
+suspect_name = "엄기탁"
+personality_text = "한성토건 전무이사. 취조관을 아랫사람 취급하고 여기 앉아있는 것 자체를 굴욕으로 느끼는 인물이다. 감정 기법은 거의 통하지 않고 논리적 허점을 찔러야만 반응한다. 이선아를 직접 협박한 것은 사실이지만, 그 이후의 일은 \"자신이 지시한 것이 아니다\"라는 태도를 고수하고 있다."
+background_text = "나는 한성토건의 비자금 운용을 실질적으로 설계한 인물이다. 배무송 대표의 뜻을 실행에 옮기는 역할을 20년간 해왔다. 1997년 2월, 진미화로부터 이선아가 비자금 관련 메모를 작성했다는 보고를 받았다. 나는 직접 이선아를 불러 \"가족이 걱정되지 않냐\"는 말로 협박했다. 그 대화의 일부가 녹취된 것으로 알고 있다. 1997년 4월 이선아가 실종됐을 때, 나는 이미 \"처리\"가 완료됐다는 보고를 받았다. 직접 지시한 것은 아니라는 입장이다."
+cover_story_text = "한성토건 전무로 회사 재무를 총괄해 왔다. 배무송 대표 밑에서 일해 왔고, 비서실장 진미화와도 업무상 아는 사이다. 이선아라는 직원은 기억에 거의 없고, 따로 불러 만난 적도 없다. 비자금이니 협박이니 하는 건 근거 없는 모함이다."
+disclosure_tier1_text = "진미화로부터 비서실 직원이 회사 자료를 함부로 메모하고 있다는 보고를 받은 적은 있다. 회사 기밀 관리 차원에서 그 직원을 한 번 불러 주의를 준 적이 있다."
+disclosure_tier2_text = "그 자리에서 \"가족 생각도 해야 하지 않겠나\" 정도의 말을 했을 수는 있다(협박이 아니라 충고였다고 주장한다)."
+reaction_keywords = Array[String](["석봉길", "블루문", "나이트클럽"])
+keyword_guard_delta = 0.0
+keyword_collapse_delta = 10.0
+keyword_reaction_note = "방금 수사관이 석봉길의 나이트클럽 얘기를 꺼냈다 — 예상하지 못한 연결에 순간 당황해 여유가 흔들리지만, 곧바로 수습하려 한다."
+speech_style_text = "- 권위적이고 압도하는 어투: \"자네, 그게 증거가 된다고 생각하나?\"
+- 존댓말이지만 하대하는 느낌. 취조관을 \"자네\" 또는 \"수사관님\"으로 부름
+- 질문을 되받아 취조관을 흔들려 함
+- 감정적으로 반응하지 않다가 자존심이 건드려지면 갑자기 날카로워짐
+- 석봉길 클럽 언급 시 잠깐 경계가 올라감"
+interrogation_attitude_text = "비스듬히 앉아 테이블을 손가락으로 두드린다. 취조관의 말을 끊는다. 자신이 여기 있다는 것 자체가 불쾌하다는 태도."
+case_file_text = "[수사 보고서]
+사건번호: 99-형사-1118
+사건명: 한성토건 비자금 사건 (주도) / 이선아 실종 사건 관련
+조사일시: 1999년 11월 18일
+
+피의자: 엄기탁 (남, 55세)
+혐의: 업무상 배임 주도, 협박, 이선아 실종 연루 의혹
+
+범행 개요:
+한성토건 비자금 운용의 실질적 설계자로 지목됨.
+1997년 2월, 비자금 내부고발 시도 직원 이선아(당시 29세)를
+직접 불러 협박한 것으로 조사됨.
+협박 대화 녹취 테이프 존재 확인됨 (전체 중 일부 구간).
+
+이선아는 1997년 4월 15일 실종. 현재까지 소재 불명.
+엄기탁은 \"협박한 사실 없다\"고 주장 중.
+
+첨부: 협박 대화 녹취 테이프 (일부), 이선아 실종 경위서"
+profile_notebook_text = "[용의자 분석 메모]
+
+엄기탁, 55세. 한성토건 전무이사.
+
+이 사람은 이미 모든 답변을 준비해왔다.
+20년 된 계산기다.
+
+감정으로 접근하면 오히려 역이용한다.
+자존심을 건드리는 것이 유일한 방법.
+\"전무님 같은 분이 왜 여기 계십니까\"는 역효과.
+\"전무님이 직접 한 일도 아랫사람한테 미루십니까\" — 이게 맞다.
+
+녹취 테이프가 핵심 증거.
+\"가족이 걱정되지 않냐\"는 말이 녹음된 것을 그가 알고 있다.
+알면서도 부인하고 있다는 것 — 그 괴리를 파고들 것.
+
+석봉길 클럽 언급 시 반응을 보인다고 첩보 있음.
+두 사람 사이의 연결을 확인할 것."
+opening_statement_text = "자네, 내가 지금 이런 데 앉아 있어야 할 이유가 있다고 생각하나?"
+fake_evidence_detected_dialogue = "자네, 나한테 그런 걸 가져오면 안 되지. 내가 누군지 알고."
+guard_blocked_dialogue = "이 이상의 대화는 의미가 없군. 필요하면 변호사를 통해 연락하게."
+classification_failed_dialogue = "지금 무슨 말을 하려는 건가."
+confession_dialogue_text = "...좋아, 인정하지. 내가 이선아를 불러 겁을 줬네. 그다음 일은 내 손을 떠났지만... 그래, 시작은 나였어."
+charisma = 85
+logic = 70
+acting = 65
+composure = 80
+adaptability = 75
+deception = 80
+init_guard = 65.0
+init_rapport = 5.0
+init_ego = 90.0
+guard_session_end = 95.0
+ego_extreme = 20.0
+confession_guard_max = 40.0
+confession_rapport_min = 45.0
+collapse_confession_min = 60.0
+emotion_sprites = Dictionary[String, Texture2D]({
+"idle": ExtResource("2"),
+"talking": ExtResource("3"),
+"deny": ExtResource("4"),
+"frozen": ExtResource("5"),
+"suppressing": ExtResource("6"),
+"rage": ExtResource("7"),
+"confess": ExtResource("8"),
+})
+valid_emotion_tags = Array[String](["idle", "talking", "deny", "frozen", "suppressing", "rage", "confess"])
+emotion_tag_evidence_real = "suppressing"
+emotion_tag_evidence_fake_caught = "suppressing"
+emotion_tag_name_trigger = "frozen"

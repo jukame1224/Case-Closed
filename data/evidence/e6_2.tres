@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E6-2"
+stage = 6
+description = "실종 당일 차량 목격 진술 (불확실, 미확인)"
+evidence_type = 1
+reaction_dialogue = "제... 제 차가 거기서요? 저는... 그날 일찍 퇴근했는데... 확실한 거예요?"

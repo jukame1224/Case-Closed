@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E8-1"
+stage = 8
+description = "이선아 녹취 테이프 (협박 대화 일부)"
+evidence_type = 0
+reaction_dialogue = "그 테이프... 어디서 났는지 알고 싶군. 전체를 들어야 맥락이 나오지. 일부만 가지고 뭘 주장하려는 건가."

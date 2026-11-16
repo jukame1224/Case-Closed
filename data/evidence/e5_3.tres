@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EvidenceItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+evidence_id = "E5-3"
+stage = 5
+description = "해외 송금 내역 (실제론 합법적 용도)"
+evidence_type = 1
+reaction_dialogue = "그 송금이요? 인테리어 공사 대금이에요. 영수증도 있고 계약서도 있어요. 필요하면 가져올 수 있어요."
